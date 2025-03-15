@@ -200,7 +200,65 @@ ZeroTrace includes:
    Used in exploit_module.py to run Metasploit exploits against detected vulnerabilities.
    Executes msfconsole -x "use exploit/multi/...; set RHOST <target>; exploit" for automated attacks.
 - **Installation and Setup**: Expanded to include steps for setting up all required dependencies, including Python dependencies and external tools like Nmap, SQLMap, XSStrike, and Metasploit.
-- **Usage Instructions**: Clear step-by-step instructions for running the system, including choosing the scan type and setting various scan options.
+- **Usage Instructions**: Prerequisites
+
+Before running ZeroTrace, ensure you have the following installed:
+
+Python (Recommended: Python 3.x)
+
+Required dependencies (Install using pip install -r requirements.txt)
+
+Administrative privileges (some scans require root access)
+
+## Running ZeroTrace
+
+Clone the Repository (if not already done): git clone https://github.com/LuckyStail/ZeroTrace.git
+cd zerotrace
+
+2. Set Up the Virtual Environment (Recommended): python3 -m venv venv
+                                                 source venv/bin/activate  # Linux/macOS
+                                                 venv\Scripts\activate  # Windows
+
+3. Install Dependencies: pip install -r requirements.txt
+
+4.  Run ZeroTrace: python ZeroTrace.py
+
+## Choosing the Scan Type
+
+      After starting ZeroTrace, you will be prompted to choose a scan type:
+      
+      Network Scan - Identifies live hosts and open ports.
+      
+      Vulnerability Scan - Detects known vulnerabilities in target systems.
+      
+      Web Scan - Scans web applications for security flaws.
+      
+      Exploit Execution - Attempts known exploits against detected vulnerabilities.
+      
+      Custom Scan - Allows user-defined scanning parameters.
+
+
+## Setting Scan Options
+
+      Each scan type has specific options you can configure:
+      
+      Target IP/Domain: Provide the IP address or domain of the target.
+      
+      Port Range: Specify ports to scan (e.g., 80,443 or 1-65535).
+      
+      Scan Depth: Choose between a quick scan or an in-depth analysis.
+      
+      Output Format: Select output type (text, JSON, or HTML report).
+
+## Viewing Reports
+
+      Scan results are stored in the reports/ directory. Open the report file using: cat reports/scan_results.txt  # Text output
+jq . reports/scan_results.json  # JSON output
+firefox reports/scan_results.html  # HTML output
+
+
+   
+
 - **File Structure**: A breakdown of the directory structure to help users navigate the project.
 - **Reporting**: Describes how scan results are saved and how users can customize the report formats (JSON, HTML, PDF).
 - **Conclusion**: Reinforces the power and utility of ZeroTrace as an all-in-one pentesting tool.
