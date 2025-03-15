@@ -1,0 +1,30 @@
+Since ZeroTrace involves various tools (like Nmap, Metasploit, SQLMap, XSStrike), some tools are installed externally and won't be listed in the Python requirements.txt file. However, the Python dependencies that interact with these tools will be listed.
+
+# ZeroTrace Project Python dependencies
+
+# Required for interacting with subprocesses and system commands
+subprocess32==0.2.7  # For subprocess compatibility (if needed)
+
+# Required for JSON manipulation
+json5==0.9.5
+
+# PDF report generation
+fpdf==1.7.2
+
+# Required for concurrent processing (thread pools)
+concurrent.futures==3.1.1
+
+# IP address manipulation
+ipaddress==1.0.22
+
+# For colored terminal outputs (optional but useful for UI)
+termcolor==1.1.0
+
+# If you plan to use any HTTP requests in the modules:
+requests==2.26.0
+
+# For error handling and logging
+loguru==0.5.3
+
+# Optional: For additional modules like Metasploit interaction or web frameworks
+metasploit==4.0.0  # If using an API wrapper for Metasploit
