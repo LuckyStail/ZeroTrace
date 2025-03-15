@@ -141,7 +141,7 @@ ZeroTrace includes:
    ✔ Detects open ports, services, and OS details
    ✔ Supports stealth scanning techniques
    
- ##  🛠 Integration in ZeroTrace:
+   **🛠 Integration in ZeroTrace:**
    
    Used in the network_scanner.py module to scan single IPs, ranges, or entire subnets.
    Utilizes -sS (stealth scan), -O (OS detection), -sV (service version detection), and --randomize-hosts for evasion.
@@ -155,7 +155,7 @@ ZeroTrace includes:
    ✔ Identifies outdated software versions
    ✔ Scans HTTP headers, cookies, and SSL/TLS configurations
    
-##   🛠 Integration in ZeroTrace:
+   **🛠 Integration in ZeroTrace:**
    
    Used in the web_scanner.py module to check for web application vulnerabilities.
    Executes nikto -h <target> and parses the results.
@@ -168,7 +168,7 @@ ZeroTrace includes:
    ✔ Can extract database information, dump tables, and escalate privileges
    ✔ Supports blind, time-based, and error-based injection techniques
    
- ##  🛠 Integration in ZeroTrace:
+   **🛠 Integration in ZeroTrace:**
    
    Used in the sql_scanner.py module to test for SQL vulnerabilities in web apps.
    Executes sqlmap -u <target_url> --dbs --batch for automated testing.
@@ -181,7 +181,7 @@ ZeroTrace includes:
    ✔ Generates custom payloads to bypass WAFs
    ✔ Uses AI-based detection methods
    
-##   🛠 Integration in ZeroTrace:
+   **🛠 Integration in ZeroTrace:**
    
    Used in the xss_scanner.py module for automated web security assessments.
    Executes xsstrike -u <target_url> -f to detect XSS vulnerabilities.
@@ -195,7 +195,7 @@ ZeroTrace includes:
    ✔ Post-exploitation modules for privilege escalation
    ✔ Can be combined with Nmap scans to target vulnerable services
    
- ##  🛠 Integration in ZeroTrace:
+ **🛠 Integration in ZeroTrace:**
    
    Used in exploit_module.py to run Metasploit exploits against detected vulnerabilities.
    Executes msfconsole -x "use exploit/multi/...; set RHOST <target>; exploit" for automated attacks.
