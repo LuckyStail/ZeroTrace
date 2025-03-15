@@ -130,74 +130,75 @@ ZeroTrace includes:
 
 - **Project Overview**: This section now includes a description of all the major tools integrated into ZeroTrace (Network Scanning, Web Application Security Scanning, Exploit Module, Reporting).
 - **Features**: Highlights the key features of the project, including automated scanning, exploitation, reporting, and extensibility.
-- **Tools Integrated**: 1 Nmap - Network Scanner
+- **Tools Integrated**:
+## 1 Nmap - Network Scanner
 📌 Purpose:
 
-Nmap (Network Mapper) is used for network discovery, host detection, port scanning, and OS fingerprinting.
-It identifies active hosts, running services, open ports, and their versions.
-🔹 Features:
-✔ Fast and customizable network scanning
-✔ Detects open ports, services, and OS details
-✔ Supports stealth scanning techniques
-
-🛠 Integration in ZeroTrace:
-
-Used in the network_scanner.py module to scan single IPs, ranges, or entire subnets.
-Utilizes -sS (stealth scan), -O (OS detection), -sV (service version detection), and --randomize-hosts for evasion.
-2 Nikto - Web Vulnerability Scanner
+   Nmap (Network Mapper) is used for network discovery, host detection, port scanning, and OS fingerprinting.
+   It identifies active hosts, running services, open ports, and their versions.
+   🔹 Features:
+   ✔ Fast and customizable network scanning
+   ✔ Detects open ports, services, and OS details
+   ✔ Supports stealth scanning techniques
+   
+ ##  🛠 Integration in ZeroTrace:
+   
+   Used in the network_scanner.py module to scan single IPs, ranges, or entire subnets.
+   Utilizes -sS (stealth scan), -O (OS detection), -sV (service version detection), and --randomize-hosts for evasion.
+## 2 Nikto - Web Vulnerability Scanner
 📌 Purpose:
 
-Scans websites for security misconfigurations and known vulnerabilities.
-Detects outdated software, insecure HTTP headers, and common security flaws.
-🔹 Features:
-✔ Detects over 6,700 vulnerabilities
-✔ Identifies outdated software versions
-✔ Scans HTTP headers, cookies, and SSL/TLS configurations
-
-🛠 Integration in ZeroTrace:
-
-Used in the web_scanner.py module to check for web application vulnerabilities.
-Executes nikto -h <target> and parses the results.
-3 SQLmap - SQL Injection Testing
+   Scans websites for security misconfigurations and known vulnerabilities.
+   Detects outdated software, insecure HTTP headers, and common security flaws.
+   🔹 Features:
+   ✔ Detects over 6,700 vulnerabilities
+   ✔ Identifies outdated software versions
+   ✔ Scans HTTP headers, cookies, and SSL/TLS configurations
+   
+##   🛠 Integration in ZeroTrace:
+   
+   Used in the web_scanner.py module to check for web application vulnerabilities.
+   Executes nikto -h <target> and parses the results.
+## 3 SQLmap - SQL Injection Testing
 📌 Purpose:
 
-Automates the process of detecting and exploiting SQL injection vulnerabilities.
-🔹 Features:
-✔ Supports multiple database types (MySQL, PostgreSQL, MSSQL, etc.)
-✔ Can extract database information, dump tables, and escalate privileges
-✔ Supports blind, time-based, and error-based injection techniques
-
-🛠 Integration in ZeroTrace:
-
-Used in the sql_scanner.py module to test for SQL vulnerabilities in web apps.
-Executes sqlmap -u <target_url> --dbs --batch for automated testing.
-4 XSStrike - Cross-Site Scripting (XSS) Scanner
+   Automates the process of detecting and exploiting SQL injection vulnerabilities.
+   🔹 Features:
+   ✔ Supports multiple database types (MySQL, PostgreSQL, MSSQL, etc.)
+   ✔ Can extract database information, dump tables, and escalate privileges
+   ✔ Supports blind, time-based, and error-based injection techniques
+   
+ ##  🛠 Integration in ZeroTrace:
+   
+   Used in the sql_scanner.py module to test for SQL vulnerabilities in web apps.
+   Executes sqlmap -u <target_url> --dbs --batch for automated testing.
+## 4 XSStrike - Cross-Site Scripting (XSS) Scanner
 📌 Purpose:
 
-Detects and exploits XSS vulnerabilities in web applications.
-🔹 Features:
-✔ Identifies both reflected and stored XSS attacks
-✔ Generates custom payloads to bypass WAFs
-✔ Uses AI-based detection methods
-
-🛠 Integration in ZeroTrace:
-
-Used in the xss_scanner.py module for automated web security assessments.
-Executes xsstrike -u <target_url> -f to detect XSS vulnerabilities.
-5 Metasploit Framework - Exploitation Module
+   Detects and exploits XSS vulnerabilities in web applications.
+   🔹 Features:
+   ✔ Identifies both reflected and stored XSS attacks
+   ✔ Generates custom payloads to bypass WAFs
+   ✔ Uses AI-based detection methods
+   
+##   🛠 Integration in ZeroTrace:
+   
+   Used in the xss_scanner.py module for automated web security assessments.
+   Executes xsstrike -u <target_url> -f to detect XSS vulnerabilities.
+## 5 Metasploit Framework - Exploitation Module
 📌 Purpose:
 
-A powerful tool used for penetration testing and exploitation of vulnerabilities.
-Provides various exploits, payloads, and post-exploitation modules.
-🔹 Features:
-✔ Automated exploits for known vulnerabilities
-✔ Post-exploitation modules for privilege escalation
-✔ Can be combined with Nmap scans to target vulnerable services
-
-🛠 Integration in ZeroTrace:
-
-Used in exploit_module.py to run Metasploit exploits against detected vulnerabilities.
-Executes msfconsole -x "use exploit/multi/...; set RHOST <target>; exploit" for automated attacks.
+   A powerful tool used for penetration testing and exploitation of vulnerabilities.
+   Provides various exploits, payloads, and post-exploitation modules.
+   🔹 Features:
+   ✔ Automated exploits for known vulnerabilities
+   ✔ Post-exploitation modules for privilege escalation
+   ✔ Can be combined with Nmap scans to target vulnerable services
+   
+ ##  🛠 Integration in ZeroTrace:
+   
+   Used in exploit_module.py to run Metasploit exploits against detected vulnerabilities.
+   Executes msfconsole -x "use exploit/multi/...; set RHOST <target>; exploit" for automated attacks.
 - **Installation and Setup**: Expanded to include steps for setting up all required dependencies, including Python dependencies and external tools like Nmap, SQLMap, XSStrike, and Metasploit.
 - **Usage Instructions**: Clear step-by-step instructions for running the system, including choosing the scan type and setting various scan options.
 - **File Structure**: A breakdown of the directory structure to help users navigate the project.
