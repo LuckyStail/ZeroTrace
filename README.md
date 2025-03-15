@@ -128,8 +128,6 @@ ZeroTrace includes:
 
 ### Explanation of Updates:
 
-- **Project Overview**: This section now includes a description of all the major tools integrated into ZeroTrace (Network Scanning, Web Application Security Scanning, Exploit Module, Reporting).
-- **Features**: Highlights the key features of the project, including automated scanning, exploitation, reporting, and extensibility.
 - **Tools Integrated**:
 ## 1 Nmap - Network Scanner
 📌 Purpose:
